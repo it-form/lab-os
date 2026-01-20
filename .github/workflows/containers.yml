@@ -60,8 +60,7 @@ jobs:
 
       - name: Vérifier que MySQL fonctionne
         run: |
-          docker run --rm --network host mysql:8.0 mysql -h127.0.0.1 -uwpuser -pwppass -e "SHOW DATABASES;" | grep wordpress
-|| exit 1
+          docker run --rm --network host mysql:8.0 mysql -h127.0.0.1 -uwpuser -pwppass -e "SHOW DATABASES;" | grep wordpress || exit 1
 
        - name: Vérifier que WordPress répond
          run: curl -I http://localhost:8080 || exit 1
