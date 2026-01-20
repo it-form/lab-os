@@ -53,7 +53,7 @@ jobs:
           EOF
 
           docker compose up -d
-          sleep 30 # on attend que les services démarrent
+          sleep 30 # attend que les services démarrent
 
       - name: Vérifier que les containers tournent
         run: docker ps
